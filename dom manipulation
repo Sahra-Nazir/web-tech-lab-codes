@@ -1,0 +1,66 @@
+// Selecting HTML elements
+const title = document.getElementById("title");
+const message = document.getElementById("message");
+
+const changeTextButton =
+    document.getElementById("changeText");
+
+const changeColorButton =
+    document.getElementById("changeColor");
+
+const addElementButton =
+    document.getElementById("addElement");
+
+const removeElementButton =
+    document.getElementById("removeElement");
+
+const output =
+    document.getElementById("output");
+
+
+// 1. Change text
+changeTextButton.addEventListener("click", function() {
+
+    message.textContent =
+        "The text has been changed using JavaScript!";
+
+});
+
+
+// 2. Change CSS
+changeColorButton.addEventListener("click", function() {
+
+    title.style.color = "red";
+
+    message.style.fontSize = "20px";
+
+    message.style.fontWeight = "bold";
+
+});
+
+
+// 3. Create a new element
+addElementButton.addEventListener("click", function() {
+
+    const newElement = document.createElement("p");
+
+    newElement.textContent =
+        "This paragraph was created using JavaScript.";
+
+    newElement.classList.add("new-item");
+
+    output.appendChild(newElement);
+
+});
+
+
+// 4. Remove an element
+removeElementButton.addEventListener("click", function() {
+
+    const lastElement = output.lastElementChild;
+
+    if (lastElement) {
+        lastElement.remove();
+    }
+
+});
