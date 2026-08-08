@@ -3,22 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendar</title>
+  <title>Book Haven - Online Book Shop</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="calendar">
-    <div class="calendar-header">
-      <button id="prevMonth" aria-label="Previous month">&lt;</button>
-      <h1 id="monthYear"></h1>
-      <button id="nextMonth" aria-label="Next month">&gt;</button>
-    </div>
-    <div class="weekdays">
-      <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
-      <div>Thu</div><div>Fri</div><div>Sat</div>
-    </div>
-    <div class="dates" id="dates"></div>
+<header>
+  <nav class="navbar">
+    <h1 class="logo">📚 Book Haven</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li><li><a href="#books">Books</a></li>
+      <li><a href="#categories">Categories</a></li><li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="cart" id="cartButton">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">WELCOME TO BOOK HAVEN</p>
+    <h2>Discover Your Next <span>Great Read</span></h2>
+    <p>Explore exciting books from fiction and fantasy to science, history, and self-development.</p>
+    <a href="#books" class="btn">Shop Books</a>
   </div>
-  <script src="script.js"></script>
+  <div class="hero-book"><div class="book"><div class="book-cover"><strong>THE<br>ADVENTURE</strong><small>A Great Story</small></div></div></div>
+</section>
+
+<section id="books" class="section">
+  <div class="section-title"><p>OUR COLLECTION</p><h2>Featured Books</h2></div>
+  <div class="book-container">
+    <article class="book-card"><div class="book-image book-one">📖</div><h3>The Great Adventure</h3><p>John Smith</p><div class="rating">★★★★★</div><h4>$18.99</h4><button class="add-cart">Add to Cart</button></article>
+    <article class="book-card"><div class="book-image book-two">📕</div><h3>Dream Beyond</h3><p>Emma Wilson</p><div class="rating">★★★★★</div><h4>$15.99</h4><button class="add-cart">Add to Cart</button></article>
+    <article class="book-card"><div class="book-image book-three">📗</div><h3>Green World</h3><p>David Brown</p><div class="rating">★★★★☆</div><h4>$21.50</h4><button class="add-cart">Add to Cart</button></article>
+    <article class="book-card"><div class="book-image book-four">📘</div><h3>Ocean Stories</h3><p>Sarah Miller</p><div class="rating">★★★★★</div><h4>$17.25</h4><button class="add-cart">Add to Cart</button></article>
+  </div>
+</section>
+
+<section id="categories" class="categories">
+  <div class="section-title"><p>EXPLORE</p><h2>Popular Categories</h2></div>
+  <div class="category-container">
+    <div class="category"><span>📚</span><h3>Fiction</h3><p>1200+ Books</p></div>
+    <div class="category"><span>🧙</span><h3>Fantasy</h3><p>850+ Books</p></div>
+    <div class="category"><span>🔬</span><h3>Science</h3><p>650+ Books</p></div>
+    <div class="category"><span>💡</span><h3>Self Help</h3><p>500+ Books</p></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="about-image">📚</div>
+  <div class="about-text">
+    <p class="eyebrow">ABOUT BOOK HAVEN</p>
+    <h2>Your Gateway to a World of Stories</h2>
+    <p>Book Haven is an online bookstore created for people who love reading. We bring together a carefully selected collection of books for readers of every age.</p>
+    <p>Whether you're looking for an exciting novel, an educational book, or inspiration for personal growth, you'll find something here.</p>
+    <a href="#books" class="btn">Explore Collection</a>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h2>Stay Updated</h2><p>Subscribe to receive new book releases, offers, and reading recommendations.</p>
+  <form class="subscribe" id="subscribeForm"><input type="email" placeholder="Enter your email" required><button type="submit">Subscribe</button></form>
+  <p id="subscribeMessage"></p>
+</section>
+
+<section id="contact" class="contact">
+  <div><h2>Book Haven</h2><p>Your favorite online destination for books.</p></div>
+  <div><h3>Contact</h3><p>📧 hello@bookhaven.com</p><p>📞 +1 234 567 890</p></div>
+  <div><h3>Follow Us</h3><p>Facebook · Instagram · Twitter</p></div>
+</section>
+
+<footer><p>© 2026 Book Haven. All Rights Reserved.</p></footer>
+<script src="script.js"></script>
 </body>
 </html>
