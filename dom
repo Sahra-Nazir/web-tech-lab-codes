@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 id="title">DOM Manipulation</h1>
+
+        <p id="message">
+            Welcome to JavaScript!
+        </p>
+
+        <button id="changeText">Change Text</button>
+        <button id="changeColor">Change Color</button>
+        <button id="addElement">Add Element</button>
+        <button id="removeElement">Remove Element</button>
+
+        <div id="output"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    padding: 35px;
+    background: white;
+
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+#message {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #3498db;
+    color: white;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+#output {
+    margin-top: 25px;
+}
+
+.new-item {
+    background: #e8f4fc;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+</html>
