@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <form id="registrationForm">
+
+            <h1>Registration Form</h1>
+            <p class="subtitle">Create your account</p>
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <small class="error" id="nameError"></small>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email">
+                <small class="error" id="emailError"></small>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Enter 10-digit phone number">
+                <small class="error" id="phoneError"></small>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <small class="error" id="passwordError"></small>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm password">
+                <small class="error" id="confirmPasswordError"></small>
+            </div>
+
+            <!-- Terms -->
+            <div class="terms">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <small class="error" id="termsError"></small>
+
+            <button type="submit">Register</button>
+
+            <p id="successMessage"></p>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+form {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #3498db;
+}
+
+input.valid {
+    border-color: #2ecc71;
+}
+
+input.invalid {
+    border-color: #e74c3c;
+}
+
+.error {
+    display: block;
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0 5px;
+}
+
+.terms label {
+    margin: 0;
+    font-weight: normal;
+}
+
+.terms input {
+    width: 16px;
+    height: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #3498db;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+#successMessage {
+    text-align: center;
+    color: #27ae60;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+</html>
